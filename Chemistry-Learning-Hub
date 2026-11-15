@@ -1,0 +1,396 @@
+
+
+\# AGENTS.md
+
+
+
+\## 1. 專案名稱
+
+Chemistry Learning Hub（化學知識庫）
+
+
+
+\## 2. 專案目的
+
+建立一個提供大學生學習普通化學的知識網站。
+
+網站用來整理化學觀念、化學公式、實驗教學及計算方法。
+
+讓使用者能夠快速找到需要的化學知識。
+
+
+
+\## 3. 網站設計風格
+
+\- 使用藍色、白色作為主要配色。
+
+\- 整體風格簡潔、現代、具有科技感。
+
+\- 使用卡片式設計呈現不同知識分類。
+
+\- 文字必須清楚易讀。
+
+\- 支援電腦及手機瀏覽。
+
+\- 適當加入動畫與互動效果。
+
+
+
+\## 4. 網站架構
+
+網站至少包含以下頁面：
+
+
+
+\- 首頁：介紹網站及展示知識分類。
+
+\- 普通化學：整理普通化學的重要觀念。
+
+\- 化學實驗：介紹實驗原理及注意事項。
+
+\- 化學計算：整理常見公式及計算範例。
+
+\- 學習筆記：整理常見問題及學習心得。
+
+
+
+\## 5. 檔案結構
+
+專案使用 HTML、CSS 和 JavaScript 開發。
+
+
+
+檔案結構：
+
+
+
+\- index.html：網站首頁
+
+\- pages/：存放其他內容頁面
+
+\- css/style.css：網站樣式
+
+\- js/main.js：網站互動功能
+
+\- assets/：圖片及其他素材
+
+\- AGENTS.md：AI 開發規範
+
+\- README.md：專案介紹
+
+
+
+\## 6. 檔案命名規則
+
+\- 使用英文小寫命名。
+
+\- 單字之間使用連字號（-）。
+
+\- HTML、CSS、JavaScript 檔案必須放在對應資料夾。
+
+\- 不可隨意更改既有檔案名稱。
+
+
+
+\## 7. 新增內容規則
+
+新增化學知識文章時，必須包含：
+
+
+
+1\. 文章標題
+
+2\. 簡短介紹
+
+3\. 核心知識
+
+4\. 重要公式（適用時）
+
+5\. 實際範例
+
+6\. 常見問題
+
+
+
+化學公式必須正確，並提供清楚的變數說明。
+
+遇到不確定的科學資訊，不可自行編造。
+
+
+
+\## 8. AI 開發規則
+
+\- 修改程式碼前，先了解現有專案結構。
+
+\- 優先沿用原本的設計風格。
+
+\- 新增頁面必須保持一致的導覽列及頁尾。
+
+\- 不可任意刪除原有功能。
+
+\- 不可使用失效的圖片連結。
+
+\- 網站導覽連結必須能正常使用。
+
+\- 修改後必須檢查 HTML、CSS 和 JavaScript。
+
+\- 所有頁面必須支援響應式設計。
+
+
+
+\## 9. 網站功能
+
+\- 導覽列可以切換不同頁面。
+
+\- 首頁顯示各知識分類。
+
+\- 使用者可以透過卡片進入不同內容。
+
+\- 提供清楚的返回首頁方式。
+
+
+
+\## 10. GitHub Pages 部署規則
+
+\- 首頁檔案必須命名為 index.html。
+
+\- 使用相對路徑連結 CSS、JavaScript 和圖片。
+
+\- 不可依賴本機絕對路徑。
+
+\- 部署前必須測試所有頁面及連結。
+
+
+
+\## 11. 最重要的原則
+
+每次新增頁面或內容時，
+
+都必須遵守本文件的規範。
+
+
+
+網站應該持續擴充，
+
+但整體風格、架構及使用體驗必須保持一致。
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chemistry Learning Hub，探索普通化學、化學實驗與計算知識。">
+    <title>Chemistry Learning Hub | 化學知識庫</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+
+    <!-- 導覽列 -->
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-icon">⚗️</span>
+            Chemistry Hub
+        </a>
+
+        <nav>
+          <a href="index.html">首頁</a>
+<a href="pages/chemistry.html">化學知識</a>
+<a href="pages/experiments.html">實驗知識</a>
+<a href="pages/calculations.html">化學計算</a>
+<a href="pages/notes.html">學習筆記</a>        </nav>
+    </header>
+
+    <!-- 首頁主視覺 -->
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <span class="tag">WELCOME TO CHEMISTRY HUB</span>
+
+                <h1>
+                    探索化學的世界<br>
+                    <span>讓知識變得簡單</span>
+                </h1>
+
+                <p>
+                    從基礎觀念到實驗操作，
+                    建立屬於自己的化學知識庫。
+                </p>
+
+                <a href="#chemistry" class="primary-btn">
+                    開始探索 →
+                </a>
+            </div>
+
+            <div class="hero-decoration">
+                <div class="molecule">⚛</div>
+                <div class="floating-card">H₂O</div>
+                <div class="floating-card second">NaCl</div>
+            </div>
+        </section>
+
+        <!-- 知識分類 -->
+        <section class="section" id="chemistry">
+            <div class="section-heading">
+                <span class="tag">LEARNING CATEGORIES</span>
+                <h2>探索知識分類</h2>
+                <p>選擇你想學習的化學主題</p>
+            </div>
+
+            <div class="card-container">
+
+                <article class="knowledge-card">
+                    <div class="card-icon">🧪</div>
+                    <h3>普通化學</h3>
+                    <p>學習原子結構、化學鍵、反應與物質性質。</p>
+                    <a href="pages/chemistry.html">了解更多 →</a>
+                </article>
+
+                <article class="knowledge-card" id="experiments">
+                    <div class="card-icon">🔬</div>
+                    <h3>化學實驗</h3>
+                    <p>認識實驗原理、操作概念與實驗注意事項。</p>
+                    <a href="pages/experiments.html">了解更多 →</a>
+                </article>
+
+                <article class="knowledge-card" id="calculations">
+                    <div class="card-icon">📐</div>
+                    <h3>化學計算</h3>
+                    <p>整理莫耳濃度、酸鹼滴定與化學計量。</p>
+                    <a 	href="pages/calculations.html">了解更多 →</a>
+                </article>
+
+                <article class="knowledge-card" id="notes">
+                    <div class="card-icon">📚</div>
+                    <h3>學習筆記</h3>
+                    <p>整理重要觀念、常見問題與解題技巧。</p>
+                    <a href="pages/notes.html">了解更多 →</a>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- 知識內容 -->
+        <section class="section content-section">
+            <div class="section-heading">
+                <span class="tag">CHEMISTRY KNOWLEDGE</span>
+                <h2>化學知識入門</h2>
+                <p>從這些基礎主題開始探索</p>
+            </div>
+
+            <div class="content-list">
+                <article id="chemistry-content">
+                    <h3>⚛️ 普通化學：原子與分子</h3>
+                    <p>了解原子的組成、電子排列，以及原子如何形成分子。</p>
+                </article>
+
+                <article id="experiment-content">
+                    <h3>🔬 化學實驗：酸鹼滴定</h3>
+                    <p>認識酸鹼中和反應、指示劑與滴定的基本原理。</p>
+                </article>
+
+                <article id="calculation-content">
+                    <h3>📐 化學計算：莫耳濃度</h3>
+                    <p>學習使用溶質莫耳數與溶液體積計算莫耳濃度。</p>
+                </article>
+
+                <article id="notes-content">
+                    <h3>📖 學習筆記：常見化學公式</h3>
+                    <p>整理常用公式，幫助快速複習化學的重要觀念。</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- 關於網站 -->
+        <section class="about">
+            <h2>Learn Chemistry, Explore More.</h2>
+            <p>
+                這是一個持續更新的化學學習平台，
+                讓每個人都能輕鬆探索科學。
+            </p>
+        </section>
+    </main>
+
+    <!-- 頁尾 -->
+    <footer>
+        <p>© 2026 Chemistry Learning Hub</p>
+        <p>Made for curious minds. ⚗️</p>
+    </footer>
+
+</body>
+</html>
+
+
+# ⚗️ Chemistry Learning Hub 化學知識庫
+
+## 📖 專案介紹
+
+Chemistry Learning Hub 是一個以化學學習為主題的知識網站，透過簡單清楚的分類，幫助學生理解化學觀念、認識實驗器材，以及整理常用計算公式。
+
+本網站使用 HTML、CSS 和 JavaScript 製作，採用藍白色系的設計，提供簡潔且容易瀏覽的學習環境。
+
+## 🎯 專案目標
+
+- 整理常見化學知識。
+- 學習化學實驗的基本觀念與安全守則。
+- 整理常用化學計算公式。
+- 建立個人化的化學學習筆記。
+- 練習使用 HTML、CSS 和 JavaScript 製作網站。
+
+## 📚 網站內容
+
+| 頁面 | 內容 |
+|---|---|
+| 首頁 | 網站介紹與功能分類 |
+| 化學知識 | 莫耳與莫耳濃度 |
+| 實驗知識 | 實驗室安全、常見器材、實驗紀錄 |
+| 化學計算 | 莫耳數、莫耳濃度、溶液稀釋公式 |
+| 學習筆記 | 酸鹼、氧化還原與常見觀念 |
+
+## 🛠️ 使用技術
+
+- HTML：建立網頁結構
+- CSS：設計網頁外觀與排版
+- JavaScript：增加網頁互動功能
+- GitHub：管理與分享專案
+- GitHub Pages：發布網站
+
+## 📁 專案結構
+
+```text
+Chemistry-Learning-Hub/
+├── AGENTS.md
+├── README.md
+├── index.html
+├── pages/
+│   ├── chemistry.html
+│   ├── experiments.html
+│   ├── calculations.html
+│   └── notes.html
+├── css/
+│   └── style.css
+├── js/
+│   └── main.js
+└── assets/
+```
+
+## 🤖 AI 協作規範
+
+本專案使用 AGENTS.md 作為 AI 協作規範，明確定義網站的設計風格、檔案結構、程式碼撰寫方式與內容規則。
+
+當 AI 協助新增頁面或修改功能時，可以依照這份規範維持網站的一致性，並降低修改時破壞既有功能的風險。
+
+## 🚀 未來改進方向
+
+- 增加更多化學知識文章。
+- 加入互動式化學計算工具。
+- 增加搜尋功能。
+- 持續更新實驗與課堂筆記。
+
+---
+
+**Chemistry Learning Hub — 讓化學知識變得簡單又有趣！**
